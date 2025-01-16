@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Full Screen Background Container */
+.full-screen-container {
+  width: 100%;  /* Take full width */
+  min-height: 100vh; /* Full screen height */
+  background-color:#DCE7FF; /* Background color of the container */
+  padding: 5rem 1rem; /* Padding for the container */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align to the top to prevent overlap */
+  flex-direction: column;
+  color: white; /* Default text color */
+}
+
+/* Registration Section */
+.registration-section {
+  width: 100%; /* Take full width */
+  max-width: 1200px; /* Max width for large screens */
+  text-align: center; /* Center text */
+  padding: 3rem; /* Padding inside the section */
+  margin-bottom: 3rem; /* Space between registration and FAQ section */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content */
+  position: relative; /* Reset absolute positioning */
+  z-index: 1; /* Ensure the section stays above other content */
+}
+
+/* Image Styles */
+.image1,
+.image2 {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+
+.image2 {
+  width: 200px;
+  height: 300px;
+  background: url('../Courses/image1.png') no-repeat center center;
+  border-right: 4.762px solid #0051FF;
+  border-radius: 150px;
+  top: 35%;
+  right:0%;
+}
+
+.image1 {
+  width: 210px;
+  height: 310px;
+  background: url('../Courses/image01.png') no-repeat center center;
+  border: 4.762px solid #0051FF;
+  border-radius: 170px;
+  top: 25%;
+  left: 95%;
+}
+
+/* Limitless Heading */
+.limitless-heading {
+  left: 45%; /* Adjust horizontal position */
+  top: 20%;
+  font-family: 'Caveat', sans-serif;
+  font-weight: 200;
+  font-size: 55px;
+  color: black;
+  margin-bottom: 3rem;
+}
+.registration-heading{
+  margin-bottom: 3rem;
+}
+/* Registration Heading */
+.font-agbalum {
+  left: 45%; /* Adjust horizontal position */
+  top: 25%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  color: black;
+}
+.Blue-new{
+  left: 45%; /* Adjust horizontal position */
+  top: 25%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  color:#00226B ;
+}
+
+/* Registration Paragraph */
+.registration-paragraph {
+  position:relative;
+  right: 10%; /* Adjust horizontal position */
+  top: 20%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 37.17px;
+  color: black;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 80%;
+}
+
+/* Timer */
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem; /* Space the timer from the text */
+}
+
+/* Timer Box (Responsive) */
+.timer-box {
+  background: linear-gradient(180deg, #4E82F1 0%, #00226B 50%, #00297F 100%);
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 120px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Timer Number */
+.timer-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Timer Label */
+.timer-label {
+  font-size: 1rem;
+  color: #E0E0E0;
+  margin-top: 5px;
+}
+
+/* Colon Styling */
+.colon {
+  font-size: 3.5rem;
+  color: black;
+  margin: 0 0.5rem;
+}
+
+/* Button Styles */
+.apply-button {
+  background-color:#DCE7FF;
+  border: 2px solid;
+  border-radius: 50px; /* Ellipse shape */
+  border-color: #0051FF; /* Solid color for the border */
+  padding: 1rem 7rem;
+  
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 3rem;
+}
+
+.apply-button:hover {
+  background-color:  #00297F ;
+  color:white;
+}
+
+.faq-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem;
+  background-color: #DCE7FF;
+  margin-top: 3rem; /* Ensures the section does not collide */
+  height: 100vh; /* Full screen height */
+  width: 100%; /* Full screen width */
+  flex-direction: row; /* Ensure content is aligned side by side */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.faq-left {
+  width: 40%;
+  padding-top: 3rem; /* To avoid content being too close to the top */
+}
+
+.faq-heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.faq-subheading {
+  font-size: 15px;
+  font-weight: 300;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.faq-image {
+  position: relative;
+  width: 80%;
+  left: 20%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.faq-right {
+  width: 40%;
+  position :relative;
+  right:5%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Slightly reduced gap between items */
+  padding-top: 3rem; /* To align with the content */
+}
+
+.faq-item {
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: space-between; /* Space between elements inside the box */
+  background-color: white;
+  padding: 10px 15px; /* Adjusted padding for a thinner appearance */
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  height: 70px; /* Fixed height for thinner boxes */
+}
+
+.dot {
+  font-size: 2rem; /* Reduced size of the dot */
+  color: black;
+  margin-right: 10px;
+}
+
+.question {
+  font-size: 14px; /* Adjusted font size for a compact look */
+  color: black;
+  font-weight:600;
+  text-align: center; /* Center aligns the text */
+  flex-grow: 1; /* Ensures it spans the remaining space */
+}
+
+.plus {
+  font-size: 18px; /* Slightly smaller plus icon */
+  color: black;
+  cursor: pointer;
+}
+
+/* Add Media Queries for Mobile */
+@media (max-width: 768px) {
+  .faq-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .faq-left, .faq-right {
+    width: 100%;
+  }
+
+  .faq-heading {
+    font-size: 24px;
+  }
+
+  .faq-subheading {
+    font-size: 12px;
+  }
+
+  .faq-item {
+    flex-direction: column;
+    align-items: flex-start;
+  } 
+}
+/* Query Box Styles */
+.query-box {
+  display: flex;
+  align-items: center;
+  background-color: white; /* Matches the existing boxes */
+  padding: 10px; /* Matches padding of .faq-item */
+  border-radius: 5px; /* Matches border radius of .faq-item */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Matches box shadow of .faq-item */
+  gap: 10px; /* Adds spacing between input and button */
+}
+
+/* Query Input Field */
+.query-input {
+  flex-grow: 1; /* Takes available space */
+  border: none; /* Remove default border */
+  outline: none; /* Remove focus outline */
+  font-size: 16px; /* Match font size with other content */
+  color: rgba(0, 0, 0, 0.6); /* Light gray text for placeholder */
+  background-color: transparent; /* Transparent input */
+}
+
+/* Query Send Button */
+.query-send {
+  background-color: transparent; /* Transparent background */
+  padding: 10px 40px; /* Adjust padding for elliptical shape */
+  border: 2px solid; /* Full border */
+  border-color: #0051FF; /* Solid color for the border */
+  border-radius: 50px; /* Ellipse shape */
+  color: #3182ce; /* Text color */
+  text-align: center; /* Center-align the text */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.query-send:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 81, 255, 0.1) 1.22%,
+    rgba(0, 81, 255, 0.05) 51.22%
+  ); /* Subtle hover effect */
+}

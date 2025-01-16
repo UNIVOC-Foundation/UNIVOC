@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Agbalumo';
+  src: url('/path/to/agbalumo-font.woff2') format('woff2'),
+       url('/path/to/agbalumo-font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-agbalumo {
+  font-family: 'Agbalumo', sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 183.6px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.font-caveat {
+  font-family: 'Caveat', cursive;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 183.6px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.testimonial-section {
+  width: 100vw; 
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: black; 
+  overflow: hidden; 
+}
+
+.testimonial-image {
+  max-width: 100%; 
+  max-height: 100%; 
+}
+
+.testimonial-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative; /* Enable absolute positioning inside this container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Image Styling */
+.testimonial-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button Styling */
+.apply-now {
+  position: absolute;
+  bottom: 18%; /* Adjust vertical position */
+  left: 19%; /* Center horizontally */
+  width: 100vw;
+  max-width: 260px;
+  padding: 35px 30px;
+  font-size: 1.8rem;
+  color: white;
+  background-color: #1883D3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Hover and Focus Effects */
+.apply-now:hover {
+  background-color: lightblue;
+}
+
+.apply-now:focus {
+  outline: 3px solid yellow;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .apply-now {
+    width: 50vw;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+

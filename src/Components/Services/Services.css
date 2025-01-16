@@ -1,0 +1,38 @@
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item.active {
+  background-color: #f0f0f0;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.service-item h3 {
+  margin: 16px 0 8px;
+}
+
+.service-item p {
+  margin: 0;
+}

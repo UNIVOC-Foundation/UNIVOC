@@ -1,0 +1,69 @@
+/* Container overflow control */
+.overflow-hidden {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Smooth slide animation */
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-slide {
+    animation: slide 20s linear infinite;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .box{
+    justify-content: center;
+    height: 260px;
+    width: 260px;
+  }
+  .swiper-wrapper {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .side-img2{
+    padding-left: 30px;
+  }
+  .card{
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.664);
+    
+  }
+  .flex-foot{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .flex-img{
+    display: flex;
+    flex-direction: row;
+  }
+  .companies{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  .partner{
+    border: 2px solid #0077cc;
+  }

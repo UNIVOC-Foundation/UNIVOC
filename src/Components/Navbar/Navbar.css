@@ -1,0 +1,13 @@
+@keyframes rotateGlobe {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-rotateGlobe {
+  transform-origin: center;
+  animation: rotateGlobe 2s infinite linear;
+}
