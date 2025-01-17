@@ -113,7 +113,7 @@ export default function HeroSection() {
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-end text-white text-center px-4 mt-0">
         {" "}
         {/* Adjusted margin-top */}
-        <h1 className="text-4xl md:text-8xl font-bold mb-2">
+        <h1 className="text-4xl md:text-8xl font-bold mb-2 mt-1">
           <span className="text-blue-200">Earn,</span>{" "}
           <span className="text-white">Learn,</span>{" "}
           <span className="text-gray-200">Grow</span>

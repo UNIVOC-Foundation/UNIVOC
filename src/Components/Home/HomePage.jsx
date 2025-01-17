@@ -127,7 +127,7 @@ export default function HomePage() {
             }`}
           >
             <img
-              src={image.src}
+              src={image.src || "/placeholder.svg"}
               alt={image.alt}
               className="object-contain mx-auto"
               style={{
@@ -178,7 +178,7 @@ export default function HomePage() {
             Top Job Roles
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ml-20 mr-20 gap-4">
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center ">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -192,7 +192,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -206,7 +206,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -220,7 +220,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center ">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -234,7 +234,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className=" box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className=" box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -250,7 +250,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -266,7 +266,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -280,7 +280,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -294,7 +294,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl  bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl  bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -308,7 +308,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl  bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl  bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -322,7 +322,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>{" "}
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -336,7 +336,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -350,7 +350,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -364,7 +364,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -378,7 +378,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600">54 Active Jobs</p>
             </div>
-            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="box rounded-xl bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:shadow-lg hover:scale-105">
               <img
                 alt="Work From Home Icon"
                 className="mb-2"
@@ -409,7 +409,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Course Card 1 */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="aspect-w-16 aspect-h-9 mb-4">
                   <img
                     src="/src/images/image-big5.jpg"
@@ -458,7 +458,7 @@ export default function HomePage() {
               </div>
 
               {/* Course Card 2 */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="aspect-w-16 aspect-h-9 mb-4">
                   <img
                     src="/src/images/image-big3.jpg"
@@ -567,7 +567,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-blue-200 bg-opacity-30 z-0"></div>
 
             <div className="relative z-10 pt-16 pb-8 px-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 text-center mb-16">
+              <h2 className="text-3xl md:text-3xl lg:text-5xl font-bold text-blue-600 text-center mb-16 mt-16">
                 Trusted Partners
               </h2>
 
@@ -648,7 +648,7 @@ export default function HomePage() {
                   How Univoc?
                 </h2>
                 <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 mt-8">
-                  <div className="card-how bg-white p-10 rounded-lg shadow-lg max-w-sm mx-auto rounded-xl">
+                  <div className="card-how bg-white p-10 rounded-lg shadow-lg max-w-sm mx-auto rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105">
                     <img
                       className="float-right"
                       src="./src/images/cost.jpg"
@@ -671,7 +671,7 @@ export default function HomePage() {
                       optimizing resources.
                     </p>
                   </div>
-                  <div className="card-how bg-white p-10 rounded-lg shadow-lg max-w-sm mx-auto rounded-xl">
+                  <div className="card-how bg-white p-10 rounded-lg shadow-lg max-w-sm mx-auto rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105">
                     <img
                       className="float-right"
                       src="./src/images/scale.jpg"
@@ -690,7 +690,7 @@ export default function HomePage() {
                     </p>
                     <p className="para text-gray-700 mb-4">
                       Customer-Centric Approach: Quickly adapt to new customer
-                      segments as they emerge, ensuring responsiveness to market
+                      segments as they emerge,ensuring responsiveness to market
                       changes.
                     </p>
                     <p className="para text-gray-700">
@@ -698,7 +698,7 @@ export default function HomePage() {
                       emphasize operational flexibility and rapid deployment.
                     </p>
                   </div>
-                  <div className="card-how bg-white p-6 rounded-lg shadow-lg max-w-sm mx-auto rounded-xl">
+                  <div className="card-how bg-white p-6 rounded-lg shadow-lg max-w-sm mx-auto rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105">
                     <img
                       className="float-right"
                       src="./src/images/productive.jpg"
@@ -754,7 +754,7 @@ export default function HomePage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full md:w-2/3">
                 {/* Vocational Ed-Tech Platform Hexagon */}
-                <div className="bg-blue-500 text-white rounded-lg md:rounded-xl p-6 transform md:rotate-0 md:skew-x-0 hover:scale-105 transition-transform">
+                <div className="bg-blue-500 text-white rounded-lg md:rounded-xl p-6 transform md:rotate-0 md:skew-x-0 hover:scale-105 transition-all duration-300">
                   <div className="text-center">
                     <div className="w-16 h-16 mx-auto mb-4">
                       <img
@@ -778,7 +778,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Skilling Programs Hexagon */}
-                <div className="bg-gray-100 rounded-lg md:rounded-xl p-6 transform md:rotate-0 md:skew-x-0 hover:scale-105 transition-transform">
+                <div className="bg-gray-100 rounded-lg md:rounded-xl p-6 transform md:rotate-0 md:skew-x-0 hover:scale-105 transition-all duration-300">
                   <div className="text-center">
                     <div className="w-16 h-16 mx-auto mb-4">
                       <img
@@ -801,7 +801,7 @@ export default function HomePage() {
                 </div>
 
                 {/* ISDH Hexagon */}
-                <div className="bg-blue-100 rounded-lg md:rounded-xl p-6 transform md:rotate-0 md:skew-x-0 hover:scale-105 transition-transform">
+                <div className="bg-blue-100 rounded-lg md:rounded-xl p-6 transform md:rotate-0 md:skew-x-0 hover:scale-105 transition-all duration-300">
                   <div className="text-center">
                     <div className="w-16 h-16 mx-auto mb-4">
                       <img
@@ -832,7 +832,7 @@ export default function HomePage() {
             Supported by best
           </h2>
           <div className="relative z-10 flex flex-col md:flex-row justify-center items-center mt-8 space-y-6 md:space-y-0 md:space-x-6">
-            <div className="card bg-blue-100 shadow-lg rounded-xl p-6 w-80">
+            <div className="card bg-blue-100 shadow-lg rounded-xl p-6 w-80 transition-all duration-300 hover:shadow-xl hover:scale-105">
               <img
                 alt="Help Club Foundation logo"
                 className="mx-auto mb-4"
@@ -864,7 +864,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="card bg-blue-100  shadow-lg rounded-xl p-6 w-80">
+            <div className="card bg-blue-100  shadow-lg rounded-xl p-6 w-80 transition-all duration-300 hover:shadow-xl hover:scale-105">
               <img
                 alt="Distil Assessments LLP logo"
                 className="mx-auto mb-4"
@@ -892,7 +892,7 @@ export default function HomePage() {
                 <img className="mt-6" src="./src/images/ARJUN.jpg" alt="" />
               </div>
             </div>
-            <div className="card bg-blue-100  shadow-lg rounded-xl p-6 w-80">
+            <div className="card bg-blue-100  shadow-lg rounded-xl p-6 w-80 transition-all duration-300 hover:shadow-xl hover:scale-105">
               <img
                 alt="FedEx logo"
                 className="mx-auto mb-4"
@@ -935,3 +935,4 @@ export default function HomePage() {
     </motion.div>
   );
 }
+
