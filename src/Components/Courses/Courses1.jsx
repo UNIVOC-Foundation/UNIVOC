@@ -2,8 +2,7 @@ import "../Courses/RegistrationSection.css";
 import image1 from "../Courses/image1.png";
 import image01 from "../Courses/image01.png";
 import image25 from "../Courses/image25.png";
-import sendApp from '../../assets/SendApp.png';
-
+import sendApp from "../../assets/SendApp.png";
 
 const Courses1 = () => {
   return (
