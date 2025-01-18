@@ -15,7 +15,7 @@ import Life from "../Hero/Life.png";
 import Testimonial from "../Hero/Testimonial.png";
 import "../Hero/Applynow.css"; // Ensure the correct path
 import Tech from "../TECH/Tech"; // Ensure the correct path
-import TrustedPartners from "../Home/TrustedPartners"; // Corrected path
+
 import Contact from "../Contact"; // Ensure the correct path
 import Chef from "../Hero/Chef.png";
 import Doctor from "../Hero/Doctor_with_microscope.png";
@@ -497,7 +497,7 @@ export default function HomePage() {
 
                   <div className="text-center">
                     <a
-                      href="#"
+                      href="/"
                       className="inline-block bg-blue-50 text-blue-600 border border-blue-600 rounded-full px-6 py-2 font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-300"
                     >
                       Apply Now
@@ -566,14 +566,14 @@ export default function HomePage() {
           <div className="max-w-full mx-auto relative w-full min-h-[600px] lg:min-h-screen overflow-hidden bg-gray-100">
             <div className="absolute inset-0 bg-blue-200 bg-opacity-30 z-0"></div>
 
-            <div className="relative z-10 pt-16 pb-8 px-4">
-              <h2 className="text-3xl md:text-3xl lg:text-5xl font-bold text-blue-600 text-center mb-16 mt-16">
+            <div className="relative z-10 pt- pb-6 px-4">
+              <h2 className="text-3xl md:text-3xl lg:text-5xl font-bold text-blue-600 text-center mb-17 mt-16">
                 Trusted Partners
               </h2>
 
               <div
                 ref={logosContainerRef}
-                className="flex items-center w-full mt-8 md:mt-16 lg:mt-24 py-12 cursor-pointer overflow-x-hidden"
+                className="flex items-center w-full mt-4 md:mt-10 lg:mt-15 py-7 cursor-pointer overflow-x-hidden"
               >
                 <div className="flex w-[200%] space-x-8 md:space-x-12 lg:space-x-16">
                   {[...logos, ...logos].map((logo, index) => (
@@ -935,4 +935,3 @@ export default function HomePage() {
     </motion.div>
   );
 }
-

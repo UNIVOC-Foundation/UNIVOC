@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // Button Component
 const Button = ({ children, className, ...props }) => (
   <button
-    className={`px-4 py-2 text-white font-semibold rounded ${className}`}
+    className={`px-6 py-3 text-white font-bold rounded-lg transition-transform transform hover:scale-105 ${className}`}
     {...props}
   >
     {children}
@@ -13,14 +13,17 @@ const Button = ({ children, className, ...props }) => (
 // Input Component
 const Input = ({ className, ...props }) => (
   <input
-    className={`w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
+    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
     {...props}
   />
 );
 
 // Label Component
 const Label = ({ children, htmlFor }) => (
-  <label htmlFor={htmlFor} className="block text-sm font-medium text-gray-700">
+  <label
+    htmlFor={htmlFor}
+    className="block text-sm font-medium text-gray-800 mb-1"
+  >
     {children}
   </label>
 );
@@ -31,7 +34,7 @@ const Select = ({ children, onValueChange }) => {
   return (
     <select
       onChange={handleChange}
-      className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       {children}
     </select>
@@ -45,20 +48,19 @@ const SelectItem = ({ value, children }) => (
 // Textarea Component
 const Textarea = ({ className, ...props }) => (
   <textarea
-    className={`w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
+    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
     {...props}
   />
 );
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    state: '',
-    city: '',
-    school: '',
-    message: '',
+    fullName: "",
+    email: "",
+    phone: "",
+    state: "",
+    city: "",
+    message: "",
   });
 
   const handleSubmit = async (e) => {
@@ -67,33 +69,26 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#EBF5FF] relative overflow-hidden">
-      {/* Background Patterns */}
-      <div className="absolute inset-0 overflow-hidden">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute border border-white/20 rounded-full"
-            style={{
-              width: `${(i + 1) * 300}px`,
-              height: `${(i + 1) * 300}px`,
-              left: '50%',
-              top: '50%',
-              transform: 'translate(-50%, -50%)',
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container mx-auto px-4 py-16 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 py-16">
+      <div className="container mx-auto px-4 lg:px-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
           <div className="space-y-6">
-            <h1 className="text-4xl font-bold text-gray-900">
-              Have more Questions?
+            <h1 className="text-4xl font-extrabold text-gray-900">
+              Get in Touch with Us!
             </h1>
-            <p className="text-lg text-gray-600">Sector 135, Greater Noida, India</p>
-            <p className="text-lg text-gray-600">Info@univoc.co.in</p>
+            <p className="text-lg text-gray-600">
+              Have questions about our courses? Contact us and we’ll get back to
+              you shortly.
+            </p>
+            <div className="space-y-4">
+              <p className="text-base text-gray-600">
+                📍 Sector 135, Greater Noida, India
+              </p>
+              <p className="text-base text-gray-600">
+                📧 Info@univoc.co.in
+              </p>
+            </div>
 
             {/* Google Map */}
             <div className="w-full h-[300px] rounded-lg overflow-hidden shadow-lg">
@@ -110,7 +105,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="bg-white rounded-2xl shadow-lg p-10">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="fullName">Full Name*</Label>
@@ -143,9 +138,9 @@ export default function ContactPage() {
                     setFormData({ ...formData, phone: value })
                   }
                 >
-                  <SelectItem value="IN">IN</SelectItem>
-                  <SelectItem value="US">US</SelectItem>
-                  <SelectItem value="UK">UK</SelectItem>
+                  <SelectItem value="IN">+91</SelectItem>
+                  <SelectItem value="US">+1</SelectItem>
+                  <SelectItem value="UK">+44</SelectItem>
                 </Select>
                 <Input
                   placeholder="Enter your mobile number*"
@@ -183,19 +178,6 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <Label htmlFor="school">Select School Name</Label>
-                <Select
-                  onValueChange={(value) =>
-                    setFormData({ ...formData, school: value })
-                  }
-                >
-                  <SelectItem value="school1">School 1</SelectItem>
-                  <SelectItem value="school2">School 2</SelectItem>
-                  <SelectItem value="school3">School 3</SelectItem>
-                </Select>
-              </div>
-
-              <div>
                 <Label htmlFor="message">Your Message*</Label>
                 <Textarea
                   id="message"
@@ -204,7 +186,7 @@ export default function ContactPage() {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   required
-                  className="min-h-[100px]"
+                  className="min-h-[150px]"
                 />
               </div>
 

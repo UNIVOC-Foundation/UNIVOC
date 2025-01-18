@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Carousel3D.css'
+import "./Carousel3D.css";
 const images = [
   "src/assets/tech1.png",
   "src/assets/tech2.png",
@@ -34,10 +34,16 @@ const Carousel3D1 = () => {
           ></div>
         ))}
       </div>
-      <button className="carousel-button prev" onClick={() => rotateCarousel(-1)}>
+      <button
+        className="carousel-button prev"
+        onClick={() => rotateCarousel(-1)}
+      >
         &#8592;
       </button>
-      <button className="carousel-button next" onClick={() => rotateCarousel(1)}>
+      <button
+        className="carousel-button next"
+        onClick={() => rotateCarousel(1)}
+      >
         &#8594;
       </button>
     </div>
