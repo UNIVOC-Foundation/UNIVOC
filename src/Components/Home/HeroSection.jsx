@@ -25,8 +25,9 @@ export default function HeroSection({ images, currentImageIndex, setCurrentImage
           </div>
         ))}
       </div>
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-end text-white text-center sm:mb-16 sm:mt  px-4 mt-0">
+      <div className="relative z-10 min-h-500 flex flex-col items-center justify-end text-white text-center sm:mb-16 sm:mt  px-4 mt-0">
         <h1 className="text-4xl md:text-8xl font-bold mb-2">
+          <br /><br /><br /><br />
           <span className="text-blue-200">Earn,</span>{" "}
           <span className="text-white">Learn,</span>{" "}
           <span className="text-gray-200">Grow</span>
@@ -36,9 +37,9 @@ export default function HeroSection({ images, currentImageIndex, setCurrentImage
           and certification, leveraging Univoc's expertise, in partnership
           with universities, corporates, and governments.
         </p>
-        <button className="bg-white text-[#1983D3] px-3 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition-transform duration-300 hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 active:scale-95">
+      <a href="../Courses">  <button  className="bg-white text-[#1983D3] px-3 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition-transform duration-300 hover:shadow-lg hover:shadow-blue-500/50 transform hover:scale-105 active:scale-95">
           EXPLORE MORE
-        </button>
+        </button></a>
         <div className="flex space-x-4 mt-4 mb-12">
           {images.map((_, index) => (
             <button

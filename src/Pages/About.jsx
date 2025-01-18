@@ -342,7 +342,7 @@ function VisionMissionSection({ activeTab, setActiveTab, content }) {
                     className="flex items-start space-x-3 text-gray-800" // Updated to text-gray-800 to match the left side
                   >
                     <span className="text-blue-500 text-xl">•</span>
-                    <span className="text-lg font-medium">{point}</span>
+                    <span className="text-lg font-semibold">{point}</span>
                   </li>
                 ))}
               </ul>
