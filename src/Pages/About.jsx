@@ -15,7 +15,7 @@ import About3 from "/src/assets/about3.jpg";
 import About4 from "/src/assets/about4.jpg";
 import About5 from "/src/assets/about5.jpg";
 
-export default function UnifiedVocationalCourses() {
+function UnifiedVocationalCourses() {
   const [activeTab, setActiveTab] = useState("vision");
 
   const visionMissionContent = {
@@ -111,7 +111,6 @@ function Header() {
 
 function ImageGrid() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [flip, setFlip] = useState(false);
 
   const images = [
     {
@@ -120,7 +119,6 @@ function ImageGrid() {
       style: {
         width: "250px",
         height: "250px",
-        padding: "12px",
       },
     },
     {
@@ -129,7 +127,6 @@ function ImageGrid() {
       style: {
         width: "220px",
         height: "310px",
-        padding: "15px",
       },
     },
     {
@@ -138,7 +135,6 @@ function ImageGrid() {
       style: {
         width: "240px",
         height: "400px",
-        padding: "10px",
       },
     },
     {
@@ -147,7 +143,6 @@ function ImageGrid() {
       style: {
         width: "230px",
         height: "310px",
-        padding: "8px",
       },
     },
     {
@@ -156,7 +151,6 @@ function ImageGrid() {
       style: {
         width: "250px",
         height: "250px",
-        padding: "10px",
       },
     },
   ];
@@ -164,52 +158,69 @@ function ImageGrid() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-      setFlip((prevFlip) => !prevFlip);
-    }, 1500); // Change image every 0.5 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   const getVisibleImages = () => {
     const visibleImages = [];
-    for (let i = -2; i <= 2; i++) {
-      visibleImages.push(
-        images[(currentImageIndex + i + images.length) % images.length]
-      );
+    const numVisibleImages = window.innerWidth < 640 ? 3 : 5;
+    const offset = Math.floor(numVisibleImages / 2);
+
+    for (let i = -offset; i <= offset; i++) {
+      const index = (currentImageIndex + i + images.length) % images.length;
+      visibleImages.push({ ...images[index], position: i });
     }
     return visibleImages;
   };
 
   return (
-    <div className="flex justify-center gap-6 mt-6 flex-wrap">
-      {getVisibleImages().map((img, index) => (
-        <motion.div
-          key={index}
-          className={`relative transition-transform duration-200 ease-in-out transform ${
-            index === 2 ? "scale-105 opacity-100" : "scale-85 opacity-80"
-          }`}
-          style={{
-            width: img.style.width,
-            height: img.style.height,
-            padding: img.style.padding,
-          }}
-          initial={{ opacity: 0, scale: 0.8, rotateY: 0 }}
-          animate={{ opacity: 1, scale: 1, rotateY: flip ? 180 : 0 }}
-          exit={{ opacity: 0, scale: 0.8, rotateY: 0 }}
-          transition={{ duration: 0.3 }}
-          whileHover={{ scale: 1.1, rotateY: 180 }}
-        >
-          <motion.img
-            src={img.src}
-            alt={img.alt}
-            className="object-cover w-full h-full rounded-lg shadow-md"
-            style={{
-              borderRadius: "8px",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            }}
-          />
-        </motion.div>
-      ))}
+    <div className="w-full overflow-hidden py-8">
+      <div className="flex justify-center items-center">
+        <div className="relative flex justify-center gap-2 sm:gap-4 md:gap-6">
+          <AnimatePresence mode="popLayout">
+            {getVisibleImages().map((img, index) => (
+              <motion.div
+                key={`${index}-${img.src}`}
+                className="relative"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{
+                  opacity: img.position === 0 ? 1 : 0.7,
+                  scale: img.position === 0 ? 1 : 0.8,
+                  x: 0,
+                }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                }}
+                style={{
+                  width:
+                    img.position === 0
+                      ? img.style.width
+                      : `calc(${img.style.width} * 0.8)`,
+                  height:
+                    img.position === 0
+                      ? img.style.height
+                      : `calc(${img.style.height} * 0.8)`,
+                }}
+              >
+                <motion.img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                  }}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </div>
     </div>
   );
 }
@@ -273,6 +284,10 @@ function AboutSection() {
   );
 }
 
+{
+  /* Previous imports and components remain the same until VisionMissionSection */
+}
+
 function VisionMissionSection({ activeTab, setActiveTab, content }) {
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-blue-100">
@@ -324,10 +339,10 @@ function VisionMissionSection({ activeTab, setActiveTab, content }) {
                 {content[activeTab].points.map((point, index) => (
                   <li
                     key={index}
-                    className="flex items-start space-x-3 text-gray-700"
+                    className="flex items-start space-x-3 text-gray-800" // Updated to text-gray-800 to match the left side
                   >
                     <span className="text-blue-500 text-xl">•</span>
-                    <span className="text-lg">{point}</span>
+                    <span className="text-lg font-medium">{point}</span>
                   </li>
                 ))}
               </ul>
@@ -415,3 +430,5 @@ function ObjectivesSection({ objectives }) {
     </div>
   );
 }
+
+export default UnifiedVocationalCourses;
