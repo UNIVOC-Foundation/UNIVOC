@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+// Initialize EmailJS with your public key
+emailjs.init("P1abvyaZHwcVEObAo");
 
 // Button Component
 const Button = ({ children, className, ...props }) => (
@@ -63,9 +67,63 @@ export default function ContactPage() {
     message: "",
   });
 
+  const [status, setStatus] = useState({
+    message: "",
+    type: "", // 'success' or 'error'
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    setIsSubmitting(true);
+    setStatus({ message: "", type: "" });
+
+    try {
+      console.log("Sending email with data:", formData);
+      const result = await emailjs.send("service_se3uq2c", "template_ji8luik", {
+        from_name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        state: formData.state,
+        city: formData.city,
+        message: formData.message,
+        to_name: "Univoc Team",
+        to_email: "infounivoc@gmail.com",
+      });
+
+      console.log("EmailJS send result:", result);
+
+      if (result.status === 200) {
+        setStatus({
+          message: "Thank you! Your message has been sent successfully.",
+          type: "success",
+        });
+
+        // Reset form
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          state: "",
+          city: "",
+          message: "",
+        });
+
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        throw new Error(`Unexpected status code: ${result.status}`);
+      }
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      setStatus({
+        message: `Failed to send message: ${error.message}. Please try again later.`,
+        type: "error",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -78,16 +136,14 @@ export default function ContactPage() {
               Get in Touch with Us!
             </h1>
             <p className="text-lg text-gray-600">
-              Have questions about our courses? Contact us and we’ll get back to
+              Have questions about our courses? Contact us and we'll get back to
               you shortly.
             </p>
             <div className="space-y-4">
               <p className="text-base text-gray-600">
                 📍 Sector 135, Greater Noida, India
               </p>
-              <p className="text-base text-gray-600">
-                📧 Info@univoc.co.in
-              </p>
+              <p className="text-base text-gray-600">📧 Info@univoc.co.in</p>
             </div>
 
             {/* Google Map */}
@@ -106,6 +162,17 @@ export default function ContactPage() {
 
           {/* Right Column - Contact Form */}
           <div className="bg-white rounded-2xl shadow-lg p-10">
+            {status.message && (
+              <div
+                className={`mb-6 p-4 rounded-lg ${status.type === "success"
+                  ? "bg-green-50 text-green-700"
+                  : "bg-red-50 text-red-700"
+                  }`}
+              >
+                {status.message}
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="fullName">Full Name*</Label>
@@ -116,6 +183,7 @@ export default function ContactPage() {
                     setFormData({ ...formData, fullName: e.target.value })
                   }
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -129,6 +197,7 @@ export default function ContactPage() {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -137,6 +206,7 @@ export default function ContactPage() {
                   onValueChange={(value) =>
                     setFormData({ ...formData, phone: value })
                   }
+                  disabled={isSubmitting}
                 >
                   <SelectItem value="IN">+91</SelectItem>
                   <SelectItem value="US">+1</SelectItem>
@@ -149,6 +219,7 @@ export default function ContactPage() {
                     setFormData({ ...formData, phone: e.target.value })
                   }
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -162,6 +233,7 @@ export default function ContactPage() {
                       setFormData({ ...formData, state: e.target.value })
                     }
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -173,6 +245,7 @@ export default function ContactPage() {
                       setFormData({ ...formData, city: e.target.value })
                     }
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -187,14 +260,16 @@ export default function ContactPage() {
                   }
                   required
                   className="min-h-[150px]"
+                  disabled={isSubmitting}
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-blue-500 hover:bg-blue-600"
+                className="w-full bg-blue-500 hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
               >
-                Contact Us
+                {isSubmitting ? "Sending..." : "Contact Us"}
               </Button>
             </form>
           </div>

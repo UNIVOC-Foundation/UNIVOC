@@ -2,7 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom"; // Use Link for client-side routing
 
 const courses = [
@@ -130,8 +131,14 @@ const PopularCoursesSlider = () => {
 
       {/* Swiper Slider */}
       <Swiper
-        navigation={true}
-        modules={[Navigation]}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Navigation, Pagination]}
         spaceBetween={25}
         slidesPerView={1}
         breakpoints={{
@@ -146,7 +153,7 @@ const PopularCoursesSlider = () => {
           <SwiperSlide key={course.id}>
             <div className="bg-white rounded-2xl overflow-hidden shadow-md">
               <img
-                src={course.image}
+                src={course.image || "/placeholder.svg"}
                 alt={course.title}
                 className="w-full h-48 object-cover"
               />
@@ -176,6 +183,8 @@ const PopularCoursesSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
     </section>
   );
 };

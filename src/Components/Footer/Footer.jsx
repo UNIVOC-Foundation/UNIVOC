@@ -6,7 +6,7 @@ import { LuMapPin } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -21,7 +21,9 @@ const Footer = () => {
               <img src={logo2} alt="OC" className="h-8" />
             </div>
             <p className="text-gray-400 text-sm max-w-xl">
-              We create industry-ready talent through advanced learning, skilling, and certification, leveraging Univoc's expertise, in partnership with universities, corporates, and governments.
+              We create industry-ready talent through advanced learning,
+              skilling, and certification, leveraging Univoc's expertise, in
+              partnership with universities, corporates, and governments.
             </p>
           </div>
         </div>
@@ -30,11 +32,21 @@ const Footer = () => {
         <div className="mb-12">
           <h2 className="text-xl font-semibold mb-6">Quick Links</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <a href="/about" className="text-gray-400 hover:text-white">About us</a>
-            <a href="/services" className="text-gray-400 hover:text-white">Services</a>
-            <a href="/courses" className="text-gray-400 hover:text-white">Courses</a>
-            <a href="/jobs" className="text-gray-400 hover:text-white">Jobs</a>
-            <a href="/contact" className="text-gray-400 hover:text-white">Contact</a>
+            <a href="/about" className="text-gray-400 hover:text-white">
+              About us
+            </a>
+            <a href="/services" className="text-gray-400 hover:text-white">
+              Services
+            </a>
+            <a href="/courses" className="text-gray-400 hover:text-white">
+              Courses
+            </a>
+            <a href="/jobs" className="text-gray-400 hover:text-white">
+              Jobs
+            </a>
+            <a href="/contact" className="text-gray-400 hover:text-white">
+              Contact
+            </a>
           </div>
         </div>
 
@@ -53,17 +65,32 @@ const Footer = () => {
 
           {/* Social Media Links */}
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a
+              href="https://x.com/Univoc272586?t=NXnOf5m8VFe1G6coGzx7Cw&s=08"
+              className="text-gray-400 hover:text-white"
+            >
               <BsTwitterX size={24} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a
+              href="https://www.linkedin.com/company/univocc/"
+              className="text-gray-400 hover:text-white"
+            >
               <FaInstagram size={24} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a
+              href="https://www.linkedin.com/company/univocc/"
+              className="text-gray-400 hover:text-white"
+            >
               <IoLogoLinkedin size={24} />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
               <FaYoutube size={24} />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61565893847420&mibextid=ZbWKwL"
+              className="text-gray-400 hover:text-white"
+            >
+              <FaFacebook size={24} />
             </a>
           </div>
         </div>

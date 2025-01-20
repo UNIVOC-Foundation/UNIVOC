@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { MdMenu, MdClose } from "react-icons/md"; // New modern icons
-import { FaUserCircle } from "react-icons/fa";
+import { MdMenu, MdClose } from "react-icons/md"; // Menu and close icons
+import { RiMenu3Line } from "react-icons/ri"; // Newly added icon
 import "../Navbar/Navbar.css";
 import logo1 from "../../assets/logo1.png";
 import globe from "../../assets/globe.png";
@@ -68,12 +68,12 @@ export default function Navbar() {
             {isMenuOpen ? (
               <MdClose className="text-3xl" /> // Close icon
             ) : (
-              <MdMenu className="text-3xl" /> // Menu icon
+              <RiMenu3Line className="text-3xl" /> // Newly added icon
             )}
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 font">
+          <div className="hidden lg:flex items-center space-x-8">
             <NavLink to="/HomePage" onClick={handleNavLinkClick}>
               HOME
             </NavLink>
@@ -99,6 +99,13 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="fixed inset-0 bg-[#1983D3] bg-opacity-95 backdrop-blur-md z-50 flex flex-col">
             <div className="lg:hidden space-y-6 p-8 relative">
+              <button
+                className="absolute top-4 right-4 text-white text-3xl"
+                onClick={toggleMenu}
+                aria-label="Close menu"
+              >
+                <MdClose />
+              </button>
               <NavLink to="/HomePage" onClick={handleNavLinkClick}>
                 HOME
               </NavLink>
@@ -117,18 +124,16 @@ export default function Navbar() {
               <NavLink to="/Contact" onClick={handleNavLinkClick}>
                 CONTACT
               </NavLink>
-              <div className="flex flex-col space-y-4 mt-4 border-t border-white pt-4">
-                <div className="flex items-center justify-between p-3 rounded-lg shadow-lg bg-black bg-opacity-20">
-                  <NavLink to="/login" onClick={handleNavLinkClick}>
-                    LOGIN
-                  </NavLink>
-                  <FaUserCircle className="text-white w-7 h-7" />
-                </div>
-                <div className="p-3 rounded-lg shadow-lg bg-black bg-opacity-20">
-                  <NavLink to="/signup" onClick={handleNavLinkClick}>
-                    SIGN UP
-                  </NavLink>
-                </div>
+
+              {/* Logo section in the mobile menu */}
+              <div className="flex justify-center mt-8">
+                <img src={logo1} alt="Logo Part 1" className="h-8" />
+                <img
+                  src={globe}
+                  alt="Rotating Globe"
+                  className="h-8 animate-spin-slow mx-4"
+                />
+                <img src={logo2} alt="Logo Part 2" className="h-8" />
               </div>
             </div>
           </div>
