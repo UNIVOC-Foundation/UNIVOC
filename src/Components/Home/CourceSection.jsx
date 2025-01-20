@@ -11,8 +11,8 @@ export default function CourseSection() {
             Our most Popular Courses
           </h1>
           <Link
-            to="/courses" // Make it a React Router Link to the courses page
-            className="text-blue-600 font-semibold flex items-center hover:text-blue-700 transition-colors"
+            to="/Courses" // Make it a React Router Link to the courses page
+            className="text-blue-600 font-semibold flex items-center hover:text-blue-700 transition-colors cursor-pointer z-10" // Adjust z-index to ensure it's clickable
           >
             View All
             <i className="fas fa-arrow-right ml-2 text-sm"></i>
@@ -21,6 +21,7 @@ export default function CourseSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Course Card 1 */}
+         
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <div className="aspect-w-16 aspect-h-9 mb-4">
               <img

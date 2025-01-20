@@ -8,13 +8,14 @@ const Courses1 = () => {
   return (
     <div className="full-screen-container">
       {/* Registration Section */}
-      <section className="registration-section">
+      <section className="course-sec">
         {/* Limitless Heading */}
-        <h1 className="limitless-heading">
+        <h1 className="heading-limitless ">
           Limitless Learning, More Possibilities
         </h1>
 
         {/* Registration Heading */}
+        <center>
         <h2 className="registration-heading">
           <span className="font-agbalum">Registration </span>
           {"  "}
@@ -24,15 +25,33 @@ const Courses1 = () => {
           {"  "}
           <span className="font-agbalum">Admission</span>
         </h2>
+        </center>
 
         {/* Registration Paragraph */}
-        <p className="registration-paragraph">
+        <p className="registration-paragraph ml-40">
           &quot;Embark on an exciting learning adventure today – Enroll now for
           new admissions and unlock access to a comprehensive range of courses
           designed to fuel your passion, enhance your skills, and set you on the
           path to success!&quot;
         </p>
-
+        <center>
+        <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="/images/ELECTRICAL AND ELECTRONICS2.png" alt="Slide 1"/>
+        </div>
+        <div class="slide">
+          <img src="/images/Pharmacy2.png" alt="Slide 2"/>
+        </div>
+        <div class="slide">
+          <img src="/images/MERN2.png" alt="Slide 3"/>
+        </div>
+        <div class="slide">
+          <img src="/images/HotelManagement2.png" alt="Slide 4"/>
+        </div>
+      </div>
+    </div>
+    </center>
         <div className="timer">
           <div className="timer-box">
             <div className="timer-number">30</div>
@@ -60,16 +79,9 @@ const Courses1 = () => {
             <div className="timer-label">SECONDS</div>
           </div>
         </div>
+        
         {/* Images */}
-        <div
-          className="image1"
-          style={{ backgroundImage: `url(${image01})` }}
-        ></div>
-        <div
-          className="image2"
-          style={{ backgroundImage: `url(${image1})` }}
-        ></div>
-
+      
         {/* Apply Now Button */}
         <div className="text-center">
           <button className="apply-button">Apply Now →</button>
