@@ -2,8 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Link } from "react-router-dom"; // Use Link for client-side routing
 
 const courses = [
@@ -131,16 +130,15 @@ const PopularCoursesSlider = () => {
 
       {/* Swiper Slider */}
       <Swiper
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Navigation, Pagination]}
+        navigation={true}
+        modules={[Navigation]}
         spaceBetween={25}
-        slidesPerView={1}
+        slidesPerView={4}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }}
         breakpoints={{
           640: { slidesPerView: 1.5 },
           768: { slidesPerView: 2 },

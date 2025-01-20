@@ -308,7 +308,9 @@ body {
   text-align: center; /* Center-align the text */
   cursor: pointer; /* Pointer cursor */
 }
-
+.timer-box{
+  width: 60%;
+}
 .query-send:hover {
   background: linear-gradient(
     180deg,
