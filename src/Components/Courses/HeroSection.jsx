@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import image4 from "../../assets/girlimg.png";
+import Courses from "./Courses";
 import adani from "../../assets/adani.png";
 import epin from "../../assets/e-pin.png";
 import nilm from "../../assets/nilm.png";
@@ -176,7 +177,11 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+  <Courses />
     </section>
+    
+
   );
 };
 
