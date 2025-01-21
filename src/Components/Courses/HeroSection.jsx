@@ -94,53 +94,12 @@ const HeroSection = () => {
           </div>
 
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 relative min-h-[400px] sm:min-h-[500px]">
-            {/* <div className="absolute inset-0 flex items-center justify-center">
-              <svg
-                className="w-[250px] sm:w-[400px] h-[250px] sm:h-[400px]"
-                viewBox="0 0 460 460"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="230"
-                  cy="230"
-                  r="228.5"
-                  stroke="#0A71BE"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeDasharray="18 20"
-                />
-                <circle
-                  cx="230"
-                  cy="230"
-                  r="210"
-                  fill="url(#paint0_linear_2_96)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_2_96"
-                    x1="61.709"
-                    y1="117.483"
-                    x2="389.561"
-                    y2="373.072"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#88ADFC" />
-                    <stop offset="1" stopColor="#255DD4" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div> */}
+          <div className="w-full lg:w-1/2 relative">
             <img
-              src={image4}
+              src={image4 || "/placeholder.svg"}
               alt="Learning Illustration"
-              className="absolute inset-0 w-[200px] sm:w-[300px] h-auto mx-auto"
+              className="w-full max-w-[500px] mx-auto object-contain scale-110 transform translate-y-5"
             />
-            {/* <div className="absolute top-4 left-4 sm:top-8 sm:left-8 bg-white rounded-xl p-3 shadow-lg">
-              <p className="text-blue-600 text-lg font-bold">50+</p>
-              <p className="text-gray-700 text-sm">Online Courses</p>
-            </div> */}
           </div>
         </div>
       </div>
@@ -168,7 +127,7 @@ const HeroSection = () => {
                 className="bg-white p-3 rounded-lg shadow-md flex items-center justify-center"
               >
                 <img
-                  src={logo}
+                  src={logo || "/placeholder.svg"}
                   alt={`Partner ${index + 1}`}
                   className="w-12 sm:w-16 h-auto object-contain"
                 />
@@ -177,11 +136,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-  <Courses />
-    </section>
-    
 
+      <Courses />
+    </section>
   );
 };
 
