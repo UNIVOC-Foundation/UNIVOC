@@ -1,209 +1,261 @@
-import "../Courses/RegistrationSection.css";
-import image1 from "../Courses/image1.png";
-import image01 from "../Courses/image01.png";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ChevronDown,
+  ChevronUp,
+  Send,
+  Clock,
+  Calendar,
+  Users,
+} from "lucide-react";
 import image25 from "../Courses/image25.png";
 import sendApp from "../../assets/SendApp.png";
 
 const Courses1 = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const faqItems = [
+    {
+      question: "Do you have a refund policy for the course?",
+      answer:
+        "Yes, we offer a 30-day money-back guarantee for all our courses. If you're not satisfied, you can request a full refund within the first 30 days of purchase.",
+    },
+    {
+      question: "Do you offer discounts for students?",
+      answer:
+        "We offer a 20% discount for students with a valid student ID. Contact our support team to learn how to apply for the student discount.",
+    },
+    {
+      question: "What topics are included in the course?",
+      answer:
+        "Our courses cover a wide range of topics including web development, data science, artificial intelligence, digital marketing, and more. Each course has a detailed curriculum you can review before enrolling.",
+    },
+    {
+      question: "Are the courses online or offline?",
+      answer:
+        "We offer both online and offline courses. Our online courses can be accessed anytime, anywhere, while our offline courses are conducted in select locations. Check the course details for specific information.",
+    },
+  ];
+
   return (
-    <div className="full-screen-container">
-      {/* Registration Section */}
-      <section className="registration-section">
-        {/* Limitless Heading */}
-        <h1 className="limitless-heading">
-          Limitless Learning, More Possibilities
-        </h1>
-
-        {/* Registration Heading */}
-        <h2 className="registration-heading">
-          <span className="font-agbalum">Registration </span>
-          {"  "}
-          <span className="font-agbalum">For </span>
-          {"  "}
-          <span className="Blue-new">New </span>
-          {"  "}
-          <span className="font-agbalum">Admission</span>
-        </h2>
-
-        {/* Registration Paragraph */}
-        <p className="registration-paragraph">
-          &quot;Embark on an exciting learning adventure today – Enroll now for
-          new admissions and unlock access to a comprehensive range of courses
-          designed to fuel your passion, enhance your skills, and set you on the
-          path to success!&quot;
-        </p>
-
-        <div className="timer">
-          <div className="timer-box">
-            <div className="timer-number">30</div>
-            <div className="timer-label">DAYS</div>
-          </div>
-
-          <span className="colon">:</span>
-
-          <div className="timer-box">
-            <div className="timer-number">18</div>
-            <div className="timer-label">HOURS</div>
-          </div>
-
-          <span className="colon">:</span>
-
-          <div className="timer-box">
-            <div className="timer-number">45</div>
-            <div className="timer-label">MINUTES</div>
-          </div>
-
-          <span className="colon">:</span>
-
-          <div className="timer-box">
-            <div className="timer-number">10</div>
-            <div className="timer-label">SECONDS</div>
-          </div>
-        </div>
-        {/* Images */}
-        <div
-          className="image1"
-          style={{ backgroundImage: `url(${image01})` }}
-        ></div>
-        <div
-          className="image2"
-          style={{ backgroundImage: `url(${image1})` }}
-        ></div>
-
-        {/* Apply Now Button */}
-        <div className="text-center">
-          <button className="apply-button">Apply Now →</button>
-        </div>
-      </section>
-      <section className="faq-section">
-        <div className="faq-left">
-          <h2 className="faq-heading">Frequently Asked Questions</h2>
-          <p className="faq-subheading">
-            Find answers to common questions about our courses, admissions,
-            fees, career opportunities, and more in our FAQ section for quick
-            guidance.
-          </p>
-          <img src={image25} alt="FAQ Illustration" className="faq-image" />
-        </div>
-
-        <div className="faq-right">
-          {[
-            "Do you have a refund policy for the course?",
-            "Do you offer discounts for students?",
-            "Do you offer discounts for students?",
-            "What topics are included in the course?",
-            "Are the courses online or offline?",
-          ].map((question, index) => (
-            <div className="faq-item" key={index}>
-              <span className="dot">•</span>
-              <span className="question">{question}</span>
-              <span className="plus">⨁</span>
-            </div>
-          ))}
-
-          {/* New Query Box */}
-          <div className="query-box">
-            <input
-              type="text"
-              placeholder="Type your queries"
-              className="query-input"
-            />
-            <button className="query-send">Send</button>
-          </div>
-        </div>
-      </section>
-      <div
-        className=" relative min-h-screen w-full flex items-center justify-center"
-        style={{
-          background:
-            "linear-gradient(270.03deg, #DCE7FF 26.41%, rgba(220, 231, 255, 0) 99.97%)",
-        }}
-      >
-        {/* Blue Box Container */}
-        <div
-          className=" relative w-[100%] max-w-[1800px] h-[600px] rounded-tl-[38.35px] rounded-tr-[38.35px] rounded-bl-[38.35px] rounded-br-[38.35px] shadow-[19.18px_19.18px_63.92px_0px_rgba(0,0,0,0.5)] p-4 md:p-16"
-          style={{
-            background:
-              "linear-gradient(95.36deg, #1F53C5 1.69%, #6993F1 24.64%, #6993F1 60.79%, #1D4BB2 96.93%)",
-          }}
-        >
-          {/*   <svg
-          width="50"
-          height="50"
-          viewBox="0 0 50 50"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-15 left-800"
-        >
-          <path
-            d="M34.129 7.9387C32.5626 6.65104 31.1483 5.21573 29.4862 3.52895C19.9673 12.431 10.4814 21.3022 0.995458 30.1734C0.868709 30.0863 0.741923 29.9993 0.615174 29.9123C1.00297 29.3058 1.31705 28.6336 1.78983 28.1027C7.60473 21.5735 13.456 15.0765 19.2687 8.5454C21.6716 5.8456 24.005 3.08395 26.5013 0.182492C31.2421 0.208757 35.8516 0.402934 40.9514 0.617787C38.4634 3.29345 36.3723 5.54225 34.129 7.9387Z"
-            fill="#BF0036"
-          />
-        </svg>
-         <svg
-          width="309"
-          height="500"
-          viewBox="0 0 309 362"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-0 right-0 z-0"
-        >
-          <path
-            d="M0.983284 360.609L59.4711 358.371L99.9542 356.823C111.929 356.365 123.832 354.748 135.495 351.994L169.602 343.941C196.337 337.628 221.781 326.746 244.812 311.774V311.774C263.067 299.907 276.979 282.437 284.459 261.989L295.876 230.777C306.156 202.673 298.176 171.141 275.765 151.311L265.967 142.64C248.084 126.816 222.018 124.381 201.513 136.619L189.618 143.719C167.544 156.895 162.054 186.459 177.927 206.681V206.681C187.472 218.84 202.848 224.884 218.117 222.478L236.854 219.526C259.629 215.938 279.486 202.069 290.696 181.922L295.812 172.728C323.291 123.343 302.673 61.0189 251.163 37.7656L212.255 20.2014C205.228 17.0293 197.944 14.4612 190.481 12.525L176.077 8.7878C116.769 -6.59997 53.7753 2.2304 0.983796 33.3323V33.3323"
-            stroke="white"
-            strokeOpacity="0.4"
-            strokeWidth="1.27842"
-            strokeLinecap="round"
-            strokeDasharray="19.18 19.18"
-          />
-        </svg> */}
-          {/* Content inside Blue Box */}
-          <div className="flex flex-col md:flex-row items-center justify-between h-full gap-8">
-            {/* Left Section - Illustration */}
-            <div className="flex justify-center w-full md:w-1/2">
-              <img
-                src={sendApp}
-                alt="Send Application"
-                className="w-[550px] h-[450px]"
-              />
-            </div>
-
-            {/* Right Section - Text and Input */}
-            <div className="text-white text-center md:text-left md:w-1/2">
-              <h1 className="text-[32px] md:text-[40px] font-bold mb-4">
-                To Become an Instructor
-              </h1>
-              <p className="text-[16px] mb-6">
-                Never miss out on the latest online courses! Receive weekly
-                updates on new opportunities directly from our website.
-              </p>
-
-              {/* Email Input */}
-              <div className="flex flex-col md:flex-row items-center gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your mail id"
-                  className="p-3 w-full md:w-[300px] bg-transparent border-b-2 border-white focus:border-white outline-none placeholder-white"
-                />
-              </div>
-
-              {/* Send Button */}
-              <button className="relative w-[179px] h-[43.8px] left-[50px] bg-[#D9D9D9] rounded-[32.4471px] border-2 border-[#01246D] hover:bg-[#01246D] hover:text-white text-black font-semibold flex items-center justify-center shadow-md transition duration-300 ease-in-out mt-6">
-                Send
-                <div
-                  className="relative right-[-50px] top-[-05px] w-[12px] h-[12px] bg-[#01246D] rotate-[60deg]"
-                  style={{
-                    clipPath: "polygon(0% 0%, 100% 50%, 0% 100%)",
-                  }}
-                ></div>
-              </button>
-            </div>
-            <p className="relative top-[160px] left-[-560px] text-[14px] text-center text-white md:text-left whitespace-nowrap">
-              We promise not to spam you!
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center space-y-8"
+          >
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              Limitless Learning, Infinite Possibilities
+            </h1>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800">
+              Your Journey to <span className="text-blue-600">Excellence</span>{" "}
+              Starts Here
+            </h2>
+            <p className="max-w-3xl mx-auto text-xl sm:text-2xl text-gray-600 leading-relaxed">
+              Embark on a transformative learning experience. Our cutting-edge
+              courses are designed to ignite your passion, sharpen your skills,
+              and propel you towards success in the digital age.
             </p>
+
+            {/* Features */}
+            <div className="flex flex-wrap justify-center gap-8 mt-12">
+              {[
+                { icon: Clock, text: "Flexible Learning" },
+                { icon: Calendar, text: "Lifetime Access" },
+                { icon: Users, text: "Expert Instructors" },
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-center space-x-2 text-gray-700"
+                >
+                  <feature.icon className="w-6 h-6 text-blue-600" />
+                  <span className="text-lg font-medium">{feature.text}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Timer Section */}
+            <div className="relative mt-16">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 transform -skew-y-3 rounded-3xl opacity-75"></div>
+              <div className="relative flex flex-wrap justify-center gap-6 py-8">
+                {[
+                  { value: "30", label: "DAYS" },
+                  { value: "18", label: "HOURS" },
+                  { value: "45", label: "MINUTES" },
+                  { value: "10", label: "SECONDS" },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-6 w-32 sm:w-40"
+                  >
+                    <div className="text-4xl sm:text-5xl font-bold text-blue-600">
+                      {item.value}
+                    </div>
+                    <div className="text-sm sm:text-base font-medium text-gray-600">
+                      {item.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg mt-12"
+            >
+              Start Your Journey Now →
+            </motion.button>
+          </motion.div>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-200 to-purple-200 opacity-50 transform -skew-y-6"></div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-700 mb-8">
+              Curious about our courses? Find quick answers to common questions
+              and discover how our programs can transform your learning
+              experience.
+            </p>
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              src={image25 || "/placeholder.svg"}
+              alt="FAQ Illustration"
+              className="w-full max-w-md mx-auto object-contain rounded-lg shadow-lg"
+            />
+          </div>
+
+          <div className="space-y-6">
+            {faqItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-md overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full p-6 text-left focus:outline-none"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-medium text-gray-800">
+                      {item.question}
+                    </span>
+                    {openFaq === index ? (
+                      <ChevronUp className="w-5 h-5 text-blue-600" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-blue-600" />
+                    )}
+                  </div>
+                </button>
+                <AnimatePresence>
+                  {openFaq === index && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="px-6 pb-6"
+                    >
+                      <p className="text-gray-600">{item.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+
+            <div className="flex items-center gap-4 mt-8">
+              <input
+                type="text"
+                placeholder="Have more questions? Ask here..."
+                className="flex-grow p-4 border-2 border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
+              />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md"
+              >
+                <Send className="w-6 h-6" />
+              </motion.button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Instructor Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full md:w-1/2"
+          >
+            <img
+              src={sendApp || "/placeholder.svg"}
+              alt="Become an Instructor"
+              className="w-full max-w-lg mx-auto object-contain rounded-lg shadow-2xl"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full md:w-1/2 text-center md:text-left"
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              Share Your Expertise
+            </h2>
+            <p className="text-xl text-gray-700 mb-8">
+              Join our community of expert instructors and shape the future of
+              education. Share your knowledge, inspire learners worldwide, and
+              grow your professional network.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-grow p-4 bg-white border-2 border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
+              />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md"
+              >
+                Become an Instructor
+              </motion.button>
+            </div>
+            <p className="mt-4 text-sm text-gray-600">
+              Join our instructor network and receive updates on teaching
+              opportunities. We respect your privacy.
+            </p>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
