@@ -130,61 +130,65 @@ const PopularCoursesSlider = () => {
       </div>
 
       {/* Swiper Slider */}
-      <Swiper
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Navigation, Pagination]}
-        spaceBetween={25}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1.5 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-        className="pb-8"
-      >
-        {courses.map((course) => (
-          <SwiperSlide key={course.id}>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md">
-              <img
-                src={course.image || "/placeholder.svg"}
-                alt={course.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-blue-600 font-semibold">
-                  {course.category}:
-                </h3>
-                <h2 className="text-gray-800 font-bold text-lg">
-                  {course.title}
-                </h2>
-                <p className="text-gray-600 text-sm mt-2">
-                  {course.description}
-                </p>
-                <div className="mt-4 flex justify-between items-center">
-                  <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-                    Apply Now
-                  </button>
-                  <Link
-                    to={course.link}
-                    className="px-4 py-2 text-blue-500 border border-blue-500 rounded hover:bg-blue-50 transition"
-                  >
-                    Explore Courses
-                  </Link>
+      <div className="swiper-container">
+        <Swiper
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Navigation, Pagination]}
+          spaceBetween={25}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          className="pb-8"
+        >
+          {courses.map((course) => (
+            <SwiperSlide key={course.id}>
+              <div className="bg-white rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={course.image || "/placeholder.svg"}
+                  alt={course.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-blue-600 font-semibold">
+                    {course.category}:
+                  </h3>
+                  <h2 className="text-gray-800 font-bold text-lg">
+                    {course.title}
+                  </h2>
+                  <p className="text-gray-600 text-sm mt-2">
+                    {course.description}
+                  </p>
+                  <div className="mt-4 flex justify-between items-center">
+                    <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                      Apply Now
+                    </button>
+                    <Link
+                      to={course.link}
+                      className="px-4 py-2 text-blue-500 border border-blue-500 rounded hover:bg-blue-50 transition"
+                    >
+                      Explore Courses
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="swiper-button-prev"></div>
-      <div className="swiper-button-next"></div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Slider Navigation Buttons */}
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
+      </div>
     </section>
   );
 };
