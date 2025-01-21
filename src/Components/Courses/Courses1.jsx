@@ -20,24 +20,24 @@ const Courses1 = () => {
 
   const faqItems = [
     {
-      question: "Do you have a refund policy for the course?",
+      question: "What is a BVoc program, and how is it different from traditional degree programs?",
       answer:
-        "Yes, we offer a 30-day money-back guarantee for all our courses. If you're not satisfied, you can request a full refund within the first 30 days of purchase.",
+        "BVoc is a skill-based undergraduate program focused on practical training and industry-specific knowledge, designed to enhance employability. Unlike traditional degrees, it emphasizes hands-on experience and vocational skills.",
     },
     {
-      question: "Do you offer discounts for students?",
+      question: "What are the eligibility criteria to enroll in the BVoc program?",
       answer:
-        "We offer a 20% discount for students with a valid student ID. Contact our support team to learn how to apply for the student discount.",
+        "Applicants typically need to have completed their 10+2 education or equivalent from a recognized board. Some programs may have additional entrance exams or interviews.",
     },
     {
-      question: "What topics are included in the course?",
+      question: "What is the duration of the BVoc program?",
       answer:
-        "Our courses cover a wide range of topics including web development, data science, artificial intelligence, digital marketing, and more. Each course has a detailed curriculum you can review before enrolling.",
+        "The BVoc program is generally a three-year undergraduate course, divided into six semesters.",
     },
     {
-      question: "Are the courses online or offline?",
+      question: "Is the BVoc program recognized by the government and universities?",
       answer:
-        "We offer both online and offline courses. Our online courses can be accessed anytime, anywhere, while our offline courses are conducted in select locations. Check the course details for specific information.",
+        "Yes, the BVoc program is recognized by the University Grants Commission (UGC) and follows the guidelines for skill-based education in India.",
     },
   ];
 
@@ -86,7 +86,7 @@ const Courses1 = () => {
 
             {/* Timer Section */}
             <div className="relative mt-16">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 transform -skew-y-3 rounded-3xl opacity-75"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400  rounded-3xl opacity-75"></div>
               <div className="relative flex flex-wrap justify-center gap-6 py-8">
                 {[
                   { value: "30", label: "DAYS" },
