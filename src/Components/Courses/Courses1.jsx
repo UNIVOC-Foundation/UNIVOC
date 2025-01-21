@@ -20,12 +20,14 @@ const Courses1 = () => {
 
   const faqItems = [
     {
-      question: "What is a BVoc program, and how is it different from traditional degree programs?",
+      question:
+        "What is a BVoc program, and how is it different from traditional degree programs?",
       answer:
         "BVoc is a skill-based undergraduate program focused on practical training and industry-specific knowledge, designed to enhance employability. Unlike traditional degrees, it emphasizes hands-on experience and vocational skills.",
     },
     {
-      question: "What are the eligibility criteria to enroll in the BVoc program?",
+      question:
+        "What are the eligibility criteria to enroll in the BVoc program?",
       answer:
         "Applicants typically need to have completed their 10+2 education or equivalent from a recognized board. Some programs may have additional entrance exams or interviews.",
     },
@@ -35,14 +37,15 @@ const Courses1 = () => {
         "The BVoc program is generally a three-year undergraduate course, divided into six semesters.",
     },
     {
-      question: "Is the BVoc program recognized by the government and universities?",
+      question:
+        "Is the BVoc program recognized by the government and universities?",
       answer:
         "Yes, the BVoc program is recognized by the University Grants Commission (UGC) and follows the guidelines for skill-based education in India.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">

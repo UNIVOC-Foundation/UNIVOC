@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { ChevronRight, HandCoins, Laptop, Gift } from 'lucide-react';
-import pharmaImage from './pharma.png';
-import mecha from'./mecha.png';
-import hotel from'./hotel.png';
-import mern from'./mern.png';
-import mean from'./mean.png';
-import java from'./java.png';
-import ee from'./EE.png';
-import ec from'./ec.png';
-import dot from'./dot.png';
-import datasci from'./datasci.png';
-import chemi from'./chemi.png';
+import { ChevronRight, HandCoins, Laptop, Gift } from "lucide-react";
+import pharmaImage from "./pharma.png";
+import mecha from "./mecha.png";
+import hotel from "./hotel.png";
+import mern from "./mern.png";
+import mean from "./mean.png";
+import java from "./java.png";
+import ee from "./EE.png";
+import ec from "./ec.png";
+import dot from "./dot.png";
+import datasci from "./datasci.png";
+import chemi from "./chemi.png";
 
 export default function ChemicalCourse() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -97,7 +97,7 @@ export default function ChemicalCourse() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <div className="relative h-[400px] bg-gradient-to-r from-[#2B6BE6] to-[#1C4ED8] overflow-hidden">
+        <div className="relative h-[400px] bg-gradient-to-r bg-[#1983D3] overflow-hidden">
           <div className="absolute inset-0 flex items-start pt-12 justify-between px-8">
             <div className="text-white">
               <nav className="mb-12">
@@ -174,7 +174,7 @@ export default function ChemicalCourse() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Duration</span>
-                  <span className="font-medium">45hrs</span>
+                  <span className="font-medium">3 Years</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Language</span>
@@ -195,14 +195,18 @@ export default function ChemicalCourse() {
         {/* Benefits Section */}
         <div className="bg-[#EEF1FF] py-16 px-4 sm:px-8">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">Benefits</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">
+              Benefits
+            </h1>
             <div className="relative">
               <div className="flex flex-col sm:flex-row gap-6 items-stretch">
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
                     className={`flex-1 bg-gradient-to-br from-[#4B83F1] to-[#3A66CC] rounded-2xl p-6 sm:p-8 text-white transition-all duration-300 ${
-                      index === currentSlide ? "opacity-100 scale-105" : "opacity-80 sm:opacity-100"
+                      index === currentSlide
+                        ? "opacity-100 scale-105"
+                        : "opacity-80 sm:opacity-100"
                     } ${index !== currentSlide ? "hidden sm:block" : ""}`}
                   >
                     <div className="mb-4 sm:mb-6">{benefit.icon}</div>
@@ -280,4 +284,3 @@ export default function ChemicalCourse() {
     </div>
   );
 }
-

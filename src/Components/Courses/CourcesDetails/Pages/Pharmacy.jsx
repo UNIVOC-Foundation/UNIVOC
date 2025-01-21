@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { ChevronRight, HandCoins, Laptop, Gift } from "lucide-react";
-import pharmaImage from './pharma.png';
-import mecha from'./mecha.png';
-import mern from'./mern.png';
-import mean from'./mean.png';
-import java from'./java.png';
-import ee from'./EE.png';
-import ec from'./ec.png';
-import dot from'./dot.png';
-import datasci from'./datasci.png';
-import chemi from'./chemi.png';
-import pharmacyHeroImage from '/images/Pharmacy.png';
-import pharmacyLabImage from '/images/Pharmacy2.png';
+import pharmaImage from "./pharma.png";
+import mecha from "./mecha.png";
+import mern from "./mern.png";
+import mean from "./mean.png";
+import java from "./java.png";
+import ee from "./EE.png";
+import ec from "./ec.png";
+import dot from "./dot.png";
+import datasci from "./datasci.png";
+import chemi from "./chemi.png";
+import pharmacyHeroImage from "/images/Pharmacy.png";
+import pharmacyLabImage from "/images/Pharmacy2.png";
 
-export default function ChemicalCourse() {
+export default function pharmacyCourse() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const benefits = [
@@ -98,8 +98,9 @@ export default function ChemicalCourse() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <div className="relative h-[400px] bg-gradient-to-r from-[#2B6BE6] to-[#1C4ED8] overflow-hidden">
+        <div className="relative h-[400px] bg-gradient-to-r bg-[#1983D3] overflow-hidden">
           <div className="absolute inset-0 flex items-start pt-12 justify-between px-8">
+            {/* Left Text Content */}
             <div className="text-white">
               <nav className="mb-12">
                 <ul className="flex gap-5 text-sm opacity-80">
@@ -121,6 +122,8 @@ export default function ChemicalCourse() {
                 <span className="ml-6 text-sm">(4.5)</span>
               </div>
             </div>
+
+            {/* Right Image Content */}
             <img
               src={pharmacyHeroImage} // Updated to use imported image
               alt="pharmacy"

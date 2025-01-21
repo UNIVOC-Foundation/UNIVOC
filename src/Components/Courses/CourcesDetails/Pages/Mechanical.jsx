@@ -97,7 +97,7 @@ export default function ChemicalCourse() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <div className="relative h-[400px] bg-gradient-to-r from-[#2B6BE6] to-[#1C4ED8] overflow-hidden">
+        <div className="relative h-[400px] bg-gradient-to-r bg-[#1983D3] overflow-hidden">
           <div className="absolute inset-0 flex items-start pt-12 justify-between px-8">
             <div className="text-white">
               <nav className="mb-12">
