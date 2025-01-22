@@ -13,6 +13,7 @@ const courses = [
     image:
       "https://plus.unsplash.com/premium_photo-1661766456250-bbde7dd079de?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Pharmacy",
+    price: "₹12,000",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const courses = [
     image:
       "https://images.unsplash.com/photo-1662638600476-d563fffbb072?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/DataScience",
+    price: "₹12,000",
   },
   {
     id: 3,
@@ -35,6 +37,7 @@ const courses = [
     image:
       "https://plus.unsplash.com/premium_photo-1726754457459-d2dfa2e3a434?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/java",
+    price: "₹12,000",
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg",
     link: "/DotNet",
+    price: "₹12,000",
   },
   {
     id: 5,
@@ -57,6 +61,7 @@ const courses = [
     image:
       "https://plus.unsplash.com/premium_photo-1664910842853-0d643f6db30c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Mechanical",
+    price: "₹12,000",
   },
   {
     id: 6,
@@ -68,6 +73,7 @@ const courses = [
     image:
       "https://images.unsplash.com/photo-1581093577421-f561a654a353?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Chemical",
+    price: "₹12,000",
   },
   {
     id: 7,
@@ -79,6 +85,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1787.jpg",
     link: "/HotelManagement",
+    price: "₹3,50,000",
   },
   {
     id: 8,
@@ -90,6 +97,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg",
     link: "/MEAN",
+    price: "₹12,000",
   },
   {
     id: 9,
@@ -101,6 +109,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg",
     link: "/MERN",
+    price: "₹12,000",
   },
   {
     id: 10,
@@ -112,6 +121,7 @@ const courses = [
     image:
       "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Electrical and Electronics",
+    price: "₹12,000",
   },
   {
     id: 11,
@@ -123,6 +133,7 @@ const courses = [
     image:
       "https://plus.unsplash.com/premium_photo-1663040598592-9f3e311f9841?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Electrical and Communication",
+    price: "₹12,000",
   },
 ];
 
@@ -189,12 +200,18 @@ const PopularCourses = () => {
                   <p className="text-gray-600 text-sm mt-2 line-clamp-2">
                     {course.description}
                   </p>
+                  <p className="text-blue-600 font-semibold mt-2">{course.price}</p>
                 </div>
 
                 <div className="flex gap-3 mt-4">
-                  <button className="flex-1 py-2.5 bg-blue-500 text-white rounded-full text-sm font-semibold hover:bg-blue-600 transition-colors duration-200">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSd7pnMkYKrjvnGB2EAoetmXE2Z97A_lVAEOTOtCjUjOvwC6mg/viewform?usp=dialog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2.5 bg-blue-500 text-white rounded-full text-sm font-semibold hover:bg-blue-600 transition-colors duration-200 text-center"
+                  >
                     Apply Now
-                  </button>
+                  </a>
                   <Link
                     to={course.link}
                     className="flex-1 py-2.5 text-blue-500 border-2 border-blue-500 rounded-full text-sm font-semibold text-center hover:bg-blue-50 transition-colors duration-200"
