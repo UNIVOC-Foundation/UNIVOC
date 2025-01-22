@@ -192,9 +192,14 @@ const PopularCourses = () => {
                 </div>
 
                 <div className="flex gap-3 mt-4">
-                  <button className="flex-1 py-2.5 bg-blue-500 text-white rounded-full text-sm font-semibold hover:bg-blue-600 transition-colors duration-200">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSd7pnMkYKrjvnGB2EAoetmXE2Z97A_lVAEOTOtCjUjOvwC6mg/viewform?usp=dialog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2.5 bg-blue-500 text-white rounded-full text-sm font-semibold hover:bg-blue-600 transition-colors duration-200 text-center"
+                  >
                     Apply Now
-                  </button>
+                  </a>
                   <Link
                     to={course.link}
                     className="flex-1 py-2.5 text-blue-500 border-2 border-blue-500 rounded-full text-sm font-semibold text-center hover:bg-blue-50 transition-colors duration-200"
