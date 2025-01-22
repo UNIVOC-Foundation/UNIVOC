@@ -11,7 +11,7 @@ const courses = [
     description:
       "Skills You'll Gain: Pharmacology, Drug Formulation, Patient Counseling.",
     image:
-      "https://img.freepik.com/free-photo/pharmacist-holding-medicine-box-capsule-pack-drugstore_31965-8533.jpg",
+      "https://plus.unsplash.com/premium_photo-1661766456250-bbde7dd079de?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Pharmacy",
   },
   {
@@ -22,7 +22,7 @@ const courses = [
     description:
       "Skills You'll Gain: Data Analysis, Machine Learning, Statistical Modeling.",
     image:
-      "https://img.freepik.com/free-vector/data-scientist-analyst-working-laptop-with-digital-graph-chart_1150-52509.jpg",
+      "https://images.unsplash.com/photo-1662638600476-d563fffbb072?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/DataScience",
   },
   {
@@ -33,7 +33,7 @@ const courses = [
     description:
       "Skills You'll Gain: Frontend Development, Backend Development, Database Management.",
     image:
-      "https://img.freepik.com/free-vector/programmer-working-web-development-code-engineer-programming-python-php-java-script-computer_90220-249.jpg",
+      "https://plus.unsplash.com/premium_photo-1726754457459-d2dfa2e3a434?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/java",
   },
   {
@@ -55,7 +55,7 @@ const courses = [
     description:
       "Skills You'll Gain: Design, Manufacturing, Maintenance, Troubleshooting.",
     image:
-      "https://img.freepik.com/free-photo/engineer-meeting-architectural-project-working-with-partner_1421-74.jpg",
+      "https://plus.unsplash.com/premium_photo-1664910842853-0d643f6db30c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Mechanical",
   },
   {
@@ -66,7 +66,7 @@ const courses = [
     description:
       "Skills You'll Gain: Chemical Reactions, Laboratory Techniques, Safety Procedures.",
     image:
-      "https://img.freepik.com/free-photo/scientist-working-laboratory-with-test-tubes-laboratory-equipment_23-2149227131.jpg",
+      "https://images.unsplash.com/photo-1581093577421-f561a654a353?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Chemical",
   },
   {
@@ -110,7 +110,7 @@ const courses = [
     description:
       "Skills You'll Gain: Electrical Circuits, Electronics, Power Systems, Control Systems.",
     image:
-      "https://img.freepik.com/free-photo/electronic-device-circuit-board-close-up_23-2148519692.jpg",
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Electrical and Electronics",
   },
   {
@@ -121,7 +121,7 @@ const courses = [
     description:
       "Skills You'll Gain: Communication Systems, Signal Processing, Network Design.",
     image:
-      "https://img.freepik.com/free-vector/5g-wireless-technology-digital-transformation-background_53876-119505.jpg",
+      "https://plus.unsplash.com/premium_photo-1663040598592-9f3e311f9841?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     link: "/Electrical and Communication",
   },
 ];
