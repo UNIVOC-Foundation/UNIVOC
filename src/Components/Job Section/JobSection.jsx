@@ -155,10 +155,14 @@ export default function JobSection() {
                     RESUME
                   </span>
                 </div>
-                <button className="flex items-center gap-2 px-6 py-2 bg-[#0088FF] text-white rounded-lg">
-                  <Upload className="w-5 h-5" />
-                  Upload
-                </button>
+                <button
+  className="flex items-center gap-2 px-6 py-2 bg-[#0088FF] text-white rounded-lg"
+  onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScQYL3NGXmUtFFkRcrYQfI-qkUjjPPRbGjemLiVhae5D3cU9w/viewform?usp=dialog'}
+>
+  <Upload className="w-5 h-5" />
+  Upload
+</button>
+
               </div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
