@@ -17,11 +17,11 @@ import Tech from "../TECH/Tech"; // Ensure the correct path
 import TrustedPartners from "../Home/TrustedPartners"; // Corrected path
 import Contact from "../Contact"; // Ensure the correct path
 import Chef from "../Hero/Chef.png";
-import Doctor from "../Hero/Doctor_with_microscope.png";
-import Researcher from "../Hero/Joker.png";
-import Civil from "../Hero/King.png";
-import Electrical_engg from "../Hero/Queen.png";
-import Student01 from "../Hero/Happy.png";
+import Doctor_with_microscope from "../Hero/Doctor_with_microscope.png";
+import Joker from "../Hero/Joker.png";
+import King from "../Hero/King.png";
+import electrical_engg from "../Hero/electrical_engg.png";
+import Happy from "../Hero/Happy.png";
 import Chem from "../Hero/Noob.png";
 
 export default function HeroSection() {
@@ -36,33 +36,33 @@ export default function HeroSection() {
       profession: "Culinary Arts",
     },
     {
-      src: Doctor,
+      src: Doctor_with_microscope,
       alt: "Doctor with microscope",
       profession: "Healthcare",
     },
     {
-      src: Civil,
+      src: Chem,
       alt: "Engineer at work",
       profession: "Engineering",
     },
     {
-      src: Chem,
+      src: Happy,
       alt: "chem_lab",
       profession: "chemistry",
     },
     {
-      src: Student01,
+      src: King,
       alt: "student01",
       profession: "student",
     },
     {
-      src: Electrical_engg,
-      alt: "electrical engg",
+      src: electrical_engg,
+      alt: "electrical_engg",
       profession: "Engineering",
     },
     {
-      src: Researcher,
-      alt: "Doctor with microscope",
+      src: Joker,
+      alt: "Joker",
       profession: "Healthcare",
     },
   ];
