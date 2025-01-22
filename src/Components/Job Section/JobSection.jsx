@@ -1,12 +1,19 @@
 import React from "react";
-import { MapPin, Briefcase, Star, Upload, LineChart, BarChart2, User } from 'lucide-react';
+import {
+  MapPin,
+  Briefcase,
+  Star,
+  Upload,
+  LineChart,
+  BarChart2,
+  User,
+} from "lucide-react";
 import JobCategories from "./JobCategories";
 import EmployerSection from "./EmployeeSection";
 
 export default function JobSection() {
-
   const companies = [
-    { name: "Dixon", logo: '/logos/logo1.png' },
+    { name: "Dixon", logo: "/logos/logo1.png" },
     { name: "Capro", logo: "/logos/logo2.png?height=80&width=80 cover" },
     { name: "MIcro-Terner", logo: "/logos/logo3.png?height=80&width=80" },
     { name: "Neelam University", logo: "/logos/logo4.png?height=80&width=80" },
@@ -62,7 +69,10 @@ export default function JobSection() {
               </div>
               <div className="flex items-center gap-1">
                 {[...Array(4)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-current text-[#0088FF]" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-current text-[#0088FF]"
+                  />
                 ))}
                 <Star className="w-5 h-5 fill-current text-[#0088FF] opacity-50" />
               </div>
@@ -129,7 +139,10 @@ export default function JobSection() {
                 </div>
                 <div className="flex">
                   {[...Array(4)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current text-[#0088FF]" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-current text-[#0088FF]"
+                    />
                   ))}
                   <Star className="w-5 h-5 fill-current text-[#0088FF] opacity-50" />
                 </div>
@@ -138,7 +151,9 @@ export default function JobSection() {
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="flex items-center justify-center flex-col h-32">
                 <div className="text-center mb-4">
-                  <span className="text-lg font-semibold text-[#0088FF]">RESUME</span>
+                  <span className="text-lg font-semibold text-[#0088FF]">
+                    RESUME
+                  </span>
                 </div>
                 <button className="flex items-center gap-2 px-6 py-2 bg-[#0088FF] text-white rounded-lg">
                   <Upload className="w-5 h-5" />
@@ -149,7 +164,9 @@ export default function JobSection() {
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <BarChart2 className="w-full h-32 text-[#0088FF]" />
               <div className="text-center mt-4">
-                <span className="text-[#0088FF] font-semibold">985+ Visits</span>
+                <span className="text-[#0088FF] font-semibold">
+                  985+ Visits
+                </span>
               </div>
             </div>
           </div>
@@ -159,11 +176,12 @@ export default function JobSection() {
             className="text-center mb-16 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: "url('/lets.png')",
-            }}>
-
+            }}
+          >
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                India's Largest <span className="text-[#0088FF]">Job Portal</span>
+                India's Largest{" "}
+                <span className="text-[#0088FF]">Job Portal</span>
               </h2>
               <p className="text-xl text-gray-600 mb-12">
                 Connecting Millions Of Job Seekers With Top Employers Every Day
@@ -192,7 +210,12 @@ export default function JobSection() {
               {/* Hire Now Section */}
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="flex flex-wrap gap-4 justify-center mb-6">
-                  {["/images/image1.png", "/images/image2.png", "/images/image3.png", "/images/image4.png"].map((src, i) => (
+                  {[
+                    "/images/image1.png",
+                    "/images/image2.png",
+                    "/images/image3.png",
+                    "/images/image4.png",
+                  ].map((src, i) => (
                     <img
                       key={i}
                       src={src}
@@ -225,7 +248,12 @@ export default function JobSection() {
 
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <div className="flex flex-wrap gap-4 justify-center mb-6 ">
-                  {["/images/image1.png", "/images/image2.png", "/images/image3.png", "/images/image4.png"].map((src, i) => (
+                  {[
+                    "/images/image1.png",
+                    "/images/image2.png",
+                    "/images/image3.png",
+                    "/images/image4.png",
+                  ].map((src, i) => (
                     <img
                       key={i}
                       src={src}
@@ -238,8 +266,6 @@ export default function JobSection() {
                   Get a Job
                 </button>
               </div>
-
-
             </div>
           </div>
 

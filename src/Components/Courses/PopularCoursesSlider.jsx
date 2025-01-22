@@ -13,6 +13,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-photo/pharmacist-holding-medicine-box-capsule-pack-drugstore_31965-8533.jpg",
     link: "/Pharmacy",
+    price: "₹12,000",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/data-scientist-analyst-working-laptop-with-digital-graph-chart_1150-52509.jpg",
     link: "/DataScience",
+    price: "₹12,000",
   },
   {
     id: 3,
@@ -35,6 +37,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/programmer-working-web-development-code-engineer-programming-python-php-java-script-computer_90220-249.jpg",
     link: "/java",
+    price: "₹12,000",
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg",
     link: "/DotNet",
+    price: "₹12,000",
   },
   {
     id: 5,
@@ -57,6 +61,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-photo/engineer-meeting-architectural-project-working-with-partner_1421-74.jpg",
     link: "/Mechanical",
+    price: "₹12,000",
   },
   {
     id: 6,
@@ -68,6 +73,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-photo/scientist-working-laboratory-with-test-tubes-laboratory-equipment_23-2149227131.jpg",
     link: "/Chemical",
+    price: "₹12,000",
   },
   {
     id: 7,
@@ -79,6 +85,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1787.jpg",
     link: "/HotelManagement",
+    price: "₹3,50,000",
   },
   {
     id: 8,
@@ -90,6 +97,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg",
     link: "/MEAN",
+    price: "₹12,000",
   },
   {
     id: 9,
@@ -101,6 +109,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg",
     link: "/MERN",
+    price: "₹12,000",
   },
   {
     id: 10,
@@ -112,6 +121,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-photo/electronic-device-circuit-board-close-up_23-2148519692.jpg",
     link: "/Electrical and Electronics",
+    price: "₹12,000",
   },
   {
     id: 11,
@@ -123,6 +133,7 @@ const courses = [
     image:
       "https://img.freepik.com/free-vector/5g-wireless-technology-digital-transformation-background_53876-119505.jpg",
     link: "/Electrical and Communication",
+    price: "₹12,000",
   },
 ];
 
@@ -189,6 +200,7 @@ const PopularCourses = () => {
                   <p className="text-gray-600 text-sm mt-2 line-clamp-2">
                     {course.description}
                   </p>
+                  <p className="text-blue-600 font-semibold mt-2">{course.price}</p>
                 </div>
 
                 <div className="flex gap-3 mt-4">

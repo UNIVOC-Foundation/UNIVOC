@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { ChevronRight, HandCoins, Laptop, Gift } from "lucide-react";
-import pharmaImage from './pharma.png';
-import mecha from'./mecha.png';
-import hotel from'./hotel.png';
-import mern from'./mern.png';
-import mean from'./mean.png';
-import java from'./java.png';
-import ee from'./EE.png';
-import ec from'./ec.png';
-import dot from'./dot.png';
-import datasci from'./datasci.png';
-import chemi from'./chemi.png';
+import pharmaImage from "./pharma.png";
+import mecha from "./mecha.png";
+import hotel from "./hotel.png";
+import mern from "./mern.png";
+import mean from "./mean.png";
+import java from "./java.png";
+import ee from "./EE.png";
+import ec from "./ec.png";
+import dot from "./dot.png";
+import datasci from "./datasci.png";
+import chemi from "./chemi.png";
 
 export default function ChemicalCourse() {
   const [currentSlide, setCurrentSlide] = useState(0);
