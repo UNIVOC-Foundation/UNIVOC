@@ -1,4 +1,4 @@
-import HomePage from '../Components/Home/HomePage';
+import HomePage from "../Components/Home/HomePage";
 import { Link } from "react-scroll"; // Import react-scroll
 
 const Home = () => {
@@ -11,8 +11,7 @@ const Home = () => {
           smooth={true}
           duration={500}
           className="scroll-down"
-        >
-        </Link>
+        ></Link>
       </div>
     </>
   );

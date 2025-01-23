@@ -8,6 +8,7 @@ import {
   BsBarChart,
 } from "react-icons/bs";
 import Vision1 from "/images/Vision1.png";
+import CEOMessage from "./CEOMessage";
 import Vision2 from "/images/Vision2.png";
 import About1 from "/src/assets/about1.png";
 import About2 from "/src/assets/about2.jpg";
@@ -80,6 +81,7 @@ function UnifiedVocationalCourses() {
     >
       <Header />
       <AboutSection />
+      <CEOMessage />
       <VisionMissionSection
         activeTab={activeTab}
         setActiveTab={setActiveTab}
